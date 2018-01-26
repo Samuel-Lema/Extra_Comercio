@@ -1,9 +1,13 @@
 Carga en cuanto se inicia el programa datos de un fichero de texto (Hay que pasarle la ruta).
 
-# <-- Formato del Fichero -->
+<-- Formato del Fichero -->
+
 Cantidad (Float) * REF#Nº Venta (String) * Nombre del Producto * REFP#Nº Venta (String) * Precio (Float)
+
 Cantidad (Float) * REF#Nº Venta (String) * Nombre del Producto * REFP#Nº Venta (String) * Precio (Float)
+
 Cantidad (Float) * REF#Nº Venta (String) * Nombre del Producto * REFP#Nº Venta (String) * Precio (Float)
+
 Etc..
 
 Lo guarda en un Array que esta en el Main (Comercio.java) y muestra todas las ventas existentes en el fichero.

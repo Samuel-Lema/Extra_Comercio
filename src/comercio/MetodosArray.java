@@ -6,6 +6,19 @@ import java.io.IOException;
 
 public class MetodosArray {
     
+    private static String nomProducto;
+    private static float precio;
+
+    // Get's y Set's
+    
+    public static String getNomProducto() {
+        return nomProducto;
+    }
+
+    public static float getPrecio() {
+        return precio;
+    }
+    
     // Lee un fichero y añade la información leida a las Ventas, Productos y Precios. Devuelve un array con las Ventas.
     
     public static Ventas[] leerBD(Ventas[] ventas) throws FileNotFoundException, IOException {
@@ -43,6 +56,26 @@ public class MetodosArray {
                 atopado = true;
                 System.out.println("<-- Mostrando la Venta Buscada -->");
                 System.out.println(object.getNv() + " | " + object.getRefProducto().getNome() + " | " + object.getRefProducto().getRefPrecio().getPrecio() * object.getCantidade()); break;
+            }
+        }
+        
+        if (atopado == false){
+            System.out.println("No existe la Venta que ha buscado.");
+        } 
+    }
+    
+    public static void darAtributos(Ventas[] array, String busqueda){
+        
+        boolean atopado = false;
+        
+        for(Ventas object: array){
+            
+            if (busqueda.equals(object.getNv())){
+                
+                atopado = true;
+                nomProducto = object.getRefProducto().getNome();
+                precio = object.getRefProducto().getRefPrecio().getPrecio();
+                break;
             }
         }
         

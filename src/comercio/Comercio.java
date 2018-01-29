@@ -37,12 +37,19 @@ public class Comercio {
         
         for (Ventas venta: ventas){
             
-            System.out.format("NV: %s | Cantidad: %s | Nombre: %s | Precio: %f\r\n", venta.getNv(), venta.getCantidade(), venta.getRefProducto().getNome(), venta.getRefProducto().getRefPrecio().getPrecio());
+            System.out.format("NV: %s | Cantidad: %s | Nombre: %s | Precio: %.2f\r\n", venta.getNv(), venta.getCantidade(), venta.getRefProducto().getNome(), venta.getRefProducto().getRefPrecio().getPrecio());
         }
         
         // Busco por Número de Venta
         
         MetodosArray.buscar(ventas, JOptionPane.showInputDialog("Introduce el NV a Buscar"));
+        
+        // Busco por Número de venta y asigno el nombre y precio estaticamente a la clase MetodosArray
+        
+        MetodosArray.darAtributos(ventas, JOptionPane.showInputDialog("Introduce el NV a Buscar (Estaticamente)"));
+        
+        System.out.format("Nombre Estatico: %s, Precio Estatico: %.2f",MetodosArray.getNomProducto(), MetodosArray.getPrecio());
+        
         
     }
     
